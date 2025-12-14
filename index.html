@@ -1,260 +1,152 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faizan | Web Developer</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
 
-    body{
-      background:#020617;
-      color:#e5e7eb;
-      overflow-x:hidden;
-    }
+  <title>Faizan | Web Developer</title>
 
-    /* ===== Scrollbar ===== */
-    ::-webkit-scrollbar{width:8px}
-    ::-webkit-scrollbar-thumb{background:#7c3aed;border-radius:10px}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* ===== Header / Hero ===== */
-    header{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:radial-gradient(circle at top,#7c3aed33,#020617 60%);
-      padding:40px 20px;
-    }
+  <!-- PROFESSIONAL CSS (PART 1) -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    .hero h1{
-      font-size:48px;
-      font-weight:700;
-      margin-bottom:15px;
-      animation:float 4s ease-in-out infinite;
-    }
+<body>
 
-    .hero span{color:#a78bfa}
-
-    .hero p{
-      font-size:18px;
-      opacity:0.9;
-      margin-bottom:30px;
-    }
-
-    .hero a{
-      padding:14px 36px;
-      border-radius:40px;
-      background:linear-gradient(135deg,#7c3aed,#2563eb);
-      color:white;
-      text-decoration:none;
-      font-size:16px;
-      box-shadow:0 20px 40px rgba(124,58,237,0.35);
-      transition:0.4s;
-    }
-
-    .hero a:hover{transform:translateY(-4px) scale(1.05)}
-
-    /* ===== Sections ===== */
-    section{
-      padding:90px 20px;
-      max-width:1100px;
-      margin:auto;
-      opacity:0;
-      transform:translateY(40px);
-      transition:1s;
-    }
-
-    section.show{opacity:1;transform:translateY(0)}
-
-    h2{
-      text-align:center;
-      font-size:32px;
-      margin-bottom:40px;
-      color:#a78bfa;
-    }
-
-    /* ===== About ===== */
-    .about p{
-      text-align:center;
-      max-width:800px;
-      margin:auto;
-      font-size:17px;
-      line-height:1.8;
-    }
-
-    /* ===== Skills ===== */
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:18px;
-    }
-
-    .skill{
-      padding:14px 26px;
-      background:rgba(30,41,59,0.6);
-      border-radius:30px;
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(8px);
-      transition:0.35s;
-    }
-
-    .skill:hover{
-      transform:translateY(-6px);
-      background:#1e293b;
-    }
-
-    /* ===== Projects ===== */
-    .projects{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .project{
-      background:rgba(30,41,59,0.75);
-      padding:26px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(10px);
-      transition:0.4s;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .project::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg,#7c3aed55,#2563eb55);
-      opacity:0;
-      transition:0.4s;
-    }
-
-    .project:hover::before{opacity:1}
-
-    .project:hover{transform:translateY(-10px) scale(1.02)}
-
-    .project h3{color:#93c5fd;margin-bottom:10px}
-    .project p{font-size:14px;opacity:0.9;margin-bottom:12px}
-    .project a{color:#a78bfa;text-decoration:none;font-size:14px;position:relative}
-
-    /* ===== Contact ===== */
-    .contact{text-align:center}
-
-    .contact p{margin-bottom:12px}
-
-    .contact a{
-      display:inline-block;
-      margin-top:18px;
-      padding:14px 36px;
-      border-radius:40px;
-      background:linear-gradient(135deg,#7c3aed,#2563eb);
-      color:white;
-      text-decoration:none;
-      font-size:16px;
-      box-shadow:0 20px 40px rgba(124,58,237,0.35);
-      transition:0.4s;
-    }
-
-    .contact a:hover{transform:scale(1.06)}
-
-    /* ===== Footer ===== */
-    footer{
-      padding:30px;
-      text-align:center;
-      background:#020617;
-      opacity:0.7;
-    }
-
-    /* ===== Animations ===== */
-    @keyframes float{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-12px)}
-    }
-
-    /* ===== Floating WhatsApp ===== */
-    .whatsapp{
-      position:fixed;
-      bottom:22px;
-      right:22px;
-      background:#25D366;
-      color:white;
-      width:55px;
-      height:55px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      font-size:28px;
-      text-decoration:none;
-      box-shadow:0 15px 30px rgba(0,0,0,0.4);
-      z-index:1000;
-    }
-  </style></head>
-<body><header>
-  <div class="hero">
-    <h1>Hi, I'm <span>Faizan</span></h1>
-    <p>Freelance Web Developer • Clean UI • Smooth Animations</p>
-    <a href="#contact">Hire Me</a>
-  </div>
-</header><section class="about">
-  <h2>About Me</h2>
-  <p>
-    I am a Class 10 student and a freelance web developer who creates modern,
-    smooth and visually appealing websites. I focus on clean UI, animations
-    and responsive design that helps businesses look professional online.
-  </p>
-</section><section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">HTML5</div>
-    <div class="skill">CSS3</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">UI / UX</div>
-    <div class="skill">Animations</div>
-    <div class="skill">Responsive Design</div>
-  </div>
-</section><section>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Premium animated personal portfolio with smooth scrolling.</p>
-      <a href="#">View Project</a>
+  <!-- ===== HERO ===== -->
+  <header>
+    <div class="hero">
+      <h1>Hi, I'm <span>Faizan</span></h1>
+      <p>Freelance Web Developer • Clean UI • Smooth Animations</p>
+      <a href="#contact">Hire Me</a>
     </div>
-    <div class="project">
-      <h3>Chat Website UI</h3>
-      <p>Modern chat interface with dark mode and interactions.</p>
-      <a href="#">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Business Website</h3>
-      <p>Professional website for small businesses and tuition centres.</p>
-      <a href="#">View Project</a>
-    </div>
-  </div>
-</section><section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@gmail.com</p>
-  <p>WhatsApp: +91-XXXXXXXXXX</p>
-  <a href="#">Start a Project</a>
-</section><footer>
-  © 2025 Faizan Ahmed | Freelance Web Developer
-</footer><a class="whatsapp" href="#">💬</a>
+  </header>
 
-<script>
-  const sections = document.querySelectorAll('section');
-  window.addEventListener('scroll',()=>{
-    sections.forEach(sec=>{
-      const top = sec.getBoundingClientRect().top;
-      if(top < window.innerHeight - 100){sec.classList.add('show')}
-    })
-  })
-</script></body>
+  <!-- ===== ABOUT ===== -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Class 10 student and a freelance web developer who creates modern,
+      smooth and visually appealing websites. I focus on clean UI, animations
+      and responsive design that helps businesses look professional online.
+    </p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">UI / UX</div>
+      <div class="skill">Animations</div>
+      <div class="skill">Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Premium animated personal portfolio with smooth scrolling.</p>
+        <a href="#" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project">
+        <h3>Chat Website UI</h3>
+        <p>Modern chat interface with dark mode and interactions.</p>
+        <a href="#" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project">
+        <h3>Business Website</h3>
+        <p>Professional website for small businesses and tuition centres.</p>
+        <a href="#" target="_blank">View Project →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <strong>martinarsenelois@gmail.com</strong></p>
+    <p>WhatsApp: <strong>+91-9002420350</strong></p>
+    <a href="#">Start a Project</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Faizan Ahmed | Freelance Web Developer
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a class="whatsapp" href="#" title="Chat on WhatsApp">💬</a>
+
+  <!-- ===== BASIC SCROLL REVEAL (TEMP) ===== -->
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const reveal = () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 120) {
+          sec.classList.add("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+  </script>
+/* =============================== FAIZAN PORTFOLIO – PRO JS (PART 2) Smooth Interactions • Premium UX Paste before </body> =============================== */
+
+/* ===== Smooth Section Reveal (Performance Optimized) ===== */ const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } }); }, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+
+/* ===== Smooth Anchor Scrolling ===== */ document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e){ e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if(target){ target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+
+/* ===== Button Ripple Effect ===== */ document.querySelectorAll('.hero a, .contact a').forEach(btn => { btn.addEventListener('click', function(e){ const ripple = document.createElement('span'); const rect = this.getBoundingClientRect();
+
+ripple.style.left = `${e.clientX - rect.left}px`;
+ripple.style.top = `${e.clientY - rect.top}px`;
+ripple.style.position = 'absolute';
+ripple.style.width = ripple.style.height = '20px';
+ripple.style.background = 'rgba(255,255,255,0.4)';
+ripple.style.borderRadius = '50%';
+ripple.style.transform = 'translate(-50%, -50%)';
+ripple.style.animation = 'ripple 0.6s ease-out';
+
+this.style.position = 'relative';
+this.style.overflow = 'hidden';
+this.appendChild(ripple);
+
+setTimeout(() => ripple.remove(), 600);
+
+}); });
+
+/* ===== Dynamic Project Hover Glow ===== */ document.querySelectorAll('.project').forEach(card => { card.addEventListener('mousemove', e => { const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top;
+
+card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(124,58,237,0.35), rgba(30,41,59,0.85))`;
+
+});
+
+card.addEventListener('mouseleave', () => { card.style.background = 'rgba(30,41,59,0.75)'; }); });
+
+/* ===== WhatsApp Floating Button Logic ===== */ const whatsappBtn = document.querySelector('.whatsapp'); if(whatsappBtn){ whatsappBtn.addEventListener('click', (e) => { e.preventDefault(); const phone = '919002420350'; const message = encodeURIComponent('Hi Faizan, I want to build a website'); window.open(https://wa.me/${phone}?text=${message}, '_blank'); }); }
+
+/* ===== Ripple Animation Inject (JS Safe) ===== */ const style = document.createElement('style'); style.innerHTML =  @keyframes ripple{ from{transform:translate(-50%,-50%) scale(0);opacity:0.8} to{transform:translate(-50%,-50%) scale(12);opacity:0} }; document.head.appendChild(style);
+
+/* ===== Console Branding ===== */ console.log('%cFaizan Portfolio Loaded','color:#7c3aed;font-size:14px;font-weight:bold');
+
+</body>
 </html>

@@ -1,0 +1,65 @@
+/* =============================== FAIZAN PORTFOLIO – PRO CSS (PART 1) Premium UI • Glassmorphism • Animations Paste this as: style.css =============================== */
+
+:root{ --bg:#020617; --card:rgba(30,41,59,0.75); --glass:rgba(255,255,255,0.06); --accent:#7c3aed; --accent2:#2563eb; --text:#e5e7eb; }
+
+*{ margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+
+body{ background:var(--bg); color:var(--text); overflow-x:hidden; }
+
+/* ===== Scrollbar ===== */ ::-webkit-scrollbar{width:8px} ::-webkit-scrollbar-thumb{ background:linear-gradient(var(--accent),var(--accent2)); border-radius:10px }
+
+/* ===== Header / Hero ===== */ header{ min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; background:radial-gradient(circle at top,var(--accent)33,var(--bg) 65%); padding:40px 20px; }
+
+.hero h1{ font-size:clamp(38px,6vw,56px); font-weight:700; margin-bottom:15px; animation:float 4s ease-in-out infinite; }
+
+.hero span{ background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+
+.hero p{ font-size:18px; opacity:0.9; margin-bottom:30px; }
+
+.hero a{ padding:14px 40px; border-radius:40px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:white; text-decoration:none; font-size:16px; box-shadow:0 20px 40px rgba(124,58,237,0.4); transition:0.4s; }
+
+.hero a:hover{ transform:translateY(-5px) scale(1.06); }
+
+/* ===== Sections ===== */ section{ padding:90px 20px; max-width:1100px; margin:auto; opacity:0; transform:translateY(40px); transition:1s ease; }
+
+section.show{ opacity:1; transform:translateY(0); }
+
+h2{ text-align:center; font-size:34px; margin-bottom:40px; background:linear-gradient(135deg,#a78bfa,#93c5fd); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+
+/* ===== About ===== */ .about p{ text-align:center; max-width:800px; margin:auto; font-size:17px; line-height:1.9; opacity:0.95; }
+
+/* ===== Skills ===== */ .skills{ display:flex; flex-wrap:wrap; justify-content:center; gap:18px; }
+
+.skill{ padding:14px 28px; background:var(--glass); border-radius:30px; border:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(10px); transition:0.35s; }
+
+.skill:hover{ transform:translateY(-6px) scale(1.05); background:#1e293b; }
+
+/* ===== Projects ===== */ .projects{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+
+.project{ background:var(--card); padding:28px; border-radius:22px; border:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(12px); transition:0.45s; position:relative; overflow:hidden; }
+
+.project::before{ content:''; position:absolute; inset:0; background:linear-gradient(135deg,var(--accent)55,var(--accent2)55); opacity:0; transition:0.45s; }
+
+.project:hover::before{opacity:1}
+
+.project:hover{ transform:translateY(-12px) scale(1.03); }
+
+.project h3{ color:#bfdbfe; margin-bottom:10px; position:relative; }
+
+.project p{ font-size:14px; opacity:0.9; margin-bottom:14px; position:relative; }
+
+.project a{ color:#a78bfa; text-decoration:none; font-size:14px; position:relative; }
+
+/* ===== Contact ===== */ .contact{text-align:center}
+
+.contact p{margin-bottom:10px;opacity:0.9}
+
+.contact a{ display:inline-block; margin-top:20px; padding:14px 40px; border-radius:40px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:white; text-decoration:none; font-size:16px; box-shadow:0 20px 40px rgba(124,58,237,0.4); transition:0.4s; }
+
+.contact a:hover{transform:scale(1.08)}
+
+/* ===== Footer ===== */ footer{ padding:30px; text-align:center; background:#020617; opacity:0.7; }
+
+/* ===== Floating WhatsApp ===== */ .whatsapp{ position:fixed; bottom:22px; right:22px; background:#25D366; color:white; width:56px; height:56px; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:26px; text-decoration:none; box-shadow:0 15px 30px rgba(0,0,0,0.4); z-index:1000; }
+
+/* ===== Animations ===== */ @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
